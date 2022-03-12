@@ -19,8 +19,8 @@ export default function Time() {
   useEffect(() => {
     setTime({
       year: fillZero(2022 - now.getFullYear()),
-      month: fillZero(3 - now.getMonth()),
-      day: fillZero(14 - now.getDate() - 1),
+      month: fillZero(3 - now.getMonth() - 1),
+      day: fillZero(14 - now.getDate()),
       hours: fillZero(14 - now.getHours() - 1),
       minutes: fillZero(60 - now.getMinutes() - 1),
       seconds: fillZero(60 - now.getSeconds()),
