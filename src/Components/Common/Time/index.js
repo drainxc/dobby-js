@@ -25,10 +25,26 @@ export default function Time() {
     //   minutes: fillZero(60 - now.getMinutes() - 1),
     //   seconds: fillZero(60 - now.getSeconds()),
     // });
+    let days;
+    if (now.getMonth - 1 === 2) {
+      days = 28;
+    } else if (now.getMonth - 1 <= 7) {
+      if ((now.getMonth - 1) % 2 === 1) {
+        days = 31;
+      } else {
+        days = 30;
+      }
+    } else {
+      if ((now.getMonth - 1) % 2 === 0) {
+        days = 31;
+      } else {
+        days = 30;
+      }
+    }
     setTime({
       year: fillZero(2023 - now.getFullYear()),
       month: fillZero(9 - now.getMonth() - 1),
-      day: fillZero(13 - now.getDate() - 1),
+      day: fillZero(days - now.getDate() - 1),
       hours: fillZero(24 - now.getHours() - 1),
       minutes: fillZero(60 - now.getMinutes() - 1),
       seconds: fillZero(60 - now.getSeconds()),
