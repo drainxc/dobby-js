@@ -17,11 +17,19 @@ export default function Time() {
   counting();
 
   useEffect(() => {
+    // setTime({
+    //   year: fillZero(2022 - now.getFullYear()),
+    //   month: fillZero(3 - now.getMonth() - 1),
+    //   day: fillZero(14 - now.getDate()),
+    //   hours: fillZero(14 - now.getHours() - 1),
+    //   minutes: fillZero(60 - now.getMinutes() - 1),
+    //   seconds: fillZero(60 - now.getSeconds()),
+    // });
     setTime({
-      year: fillZero(2022 - now.getFullYear()),
-      month: fillZero(3 - now.getMonth() - 1),
-      day: fillZero(14 - now.getDate()),
-      hours: fillZero(14 - now.getHours() - 1),
+      year: fillZero(2023 - now.getFullYear()),
+      month: fillZero(9 - now.getMonth() - 1),
+      day: fillZero(13 - now.getDate() - 1),
+      hours: fillZero(24 - now.getHours() - 1),
       minutes: fillZero(60 - now.getMinutes() - 1),
       seconds: fillZero(60 - now.getSeconds()),
     });
